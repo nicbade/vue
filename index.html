@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.1/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <!-- TWO WAY DATA BINDING INSTANTANIOUSLY -->
+        <input v-model="message">
+
+        <pre> 
+            {{ $data | json }}
+        </pre>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World'
+            }
+        });
+    </script>
+
+
+    <!-- <div id="app">
+        <form>
+            <span class="error" v-show="!message">
+                You must enter a message
+            </span>
+            <textarea v-model="message"></textarea>
+            <button type="submit" v-show="message">
+                Send Message
+            </button>
+        </form>
+        <pre> {{ $data | json }}</pre>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: ''
+            }
+        });
+    </script> -->
+
+
+
+    <!-- <div id="app"> -->
+    <!-- <form action="done.html" @submit.prevent="handleIt">
+            <button type="submit">
+                    Submit Me!
+                </button>
+        </form> -->
+    <!-- </div> -->
+
+
+
+    <!-- <div id="app">
+            <button type="submit" @click=updateCount>
+            Increment Counter: {{ count }}
+        </button>
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    count: 0
+                },
+                methods: {
+                    // handleIt: function(e) {
+                    //     alert('Handled');
+
+                    // },
+                    updateCount: function() {
+                        this.count += 1;
+                    }
+                }
+            });
+        </script> -->
+
+</body>
+
+</html>
